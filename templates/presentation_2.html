@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PL SQL to Databricks SQL Automation Presentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 80vw;
+            height: 70vh;
+            margin: 5vh auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 12px #aaa;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 2vh;
+        }
+
+        h2 {
+            color: #D32F2F; /* Atradius red */
+        }
+
+        img.logo {
+            width: 200px; /* Adjust as necessary */
+        }
+
+        img.slide-image {
+            width: 60%;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Company Logo -->
+    <div class="text-center mb-4">
+        <img class="logo" src="https://www.atradius.com.au/images/default-source/logos/atradius_logo.png" alt="Atradius Logo">
+    </div>
+
+    <div class="slide-container">
+        <!-- Slide 1 (Existing) -->
+        <div class="slide active" id="slide1">
+            <h2>Introduction & Background</h2>
+            <ul>
+                <li>Importance of data processing optimization</li>
+                <li>Traditional PL SQL to Databricks SQL conversion</li>
+                <li>The potential of AI-driven transformation</li>
+            </ul>
+            <img class="slide-image" src="https://www.atradius.co.uk/images/default-source/whitepapers-landingpage/technology.jpg" alt="Data processing">
+        </div>
+
+        <!-- Slide 2 (Existing) -->
+        <div class="slide" id="slide2">
+            <h2>Current Scenario & AI Integration</h2>
+            <ul>
+                <li>Current conversion requires significant man-hours</li>
+                <li>Initial success in conversion with GPT-4</li>
+                <li>Scope: Optimize the conversion of 30 SQL scripts</li>
+            </ul>
+            <img class="slide-image" src="https://www.datamation.com/wp-content/uploads/2019/05/Database-Management-Systems-380x250.jpg" alt="Database Management">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide3">
+            <h2>Vision and Objectives</h2>
+            <ul>
+                <li>Immediate goal: Validate AI efficiency on 30 scripts</li>
+                <li>Long-Term: AI-assisted conversions for 200+ scripts</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" id="slide4">
+            <h2>Preliminary Analysis</h2>
+            <ul>
+                <li>GPT-4's 100% conversion for basic scripts</li>
+                <li>80% efficiency for complex scripts with AI</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" id="slide5">
+            <h2>Project Implementation Phases</h2>
+            <ul>
+                <li>Data Gathering & Classification</li>
+                <li>AI Integration & Prompt Refinement</li>
+                <li>Comparative Evaluation</li>
+                <li>Expansion & Scaling</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide" id="slide6">
+            <h2>Resource & Cost Assessment</h2>
+            <ul>
+                <li>OpenAI Access Options & Costs</li>
+                <li>Utilizing in-house data science team</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide" id="slide7">
+            <h2>Key Benefits</h2>
+            <ul>
+                <li>Operational efficiency</li>
+                <li>Resource optimization</li>
+                <li>Scalability for future automation</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide" id="slide8">
+            <h2>Concluding Thoughts</h2>
+            <ul>
+                <li>The transformative potential of AI</li>
+                <li>Vision of efficiency and innovation</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide" id="slide9">
+            <h2>Sample Conversions</h2>
+            <p>Illustrative examples of AI-led conversions will be shown here.</p>
+        </div>
+
+        <!-- Slide 10: Why Use Language Models? -->
+        <div class="slide" id="slide10">
+            <h2>Why Use Language Models for SQL Conversion?</h2>
+            <ul>
+                <li>Oracle and Databricks SQL have distinct syntax and functions.</li>
+                <li>Manual conversion is error-prone and time-consuming.</li>
+                <li>Language models can understand and adapt to the nuances of both SQL types.</li>
+            </ul>
+            <img class="slide-image" src="https://image.shutterstock.com/image-vector/artificial-intelligence-icon-set-includes-260nw-1037192473.jpg" alt="AI and Language Models">
+        </div>
+
+        <!-- Slide 11: Comparison Table -->
+        <div class="slide" id="slide11">
+            <h2>Comparison of SQL Conversion Methods</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Time</th>
+                        <th>Cost</th>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Manual Conversion</td>
+                        <td>Very High</td>
+                        <td>High</td>
+                        <td>Complete control<br>No technical setup required</td>
+                        <td>Time-consuming<br>Prone to errors</td>
+                    </tr>
+                    <tr>
+                        <td>Prompting</td>
+                        <td>Moderate</td>
+                        <td>Moderate</td>
+                        <td>Simple setup<br>Direct interaction with the model</td>
+                        <td>May require multiple prompts for accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Function Calling</td>
+                        <td>Moderate</td>
+                        <td>Moderate</td>
+                        <td>Structured data extraction<br>Integration with APIs</td>
+                        <td>Requires defining functions and their schemas</td>
+                    </tr>
+                    <tr>
+                        <td>Fine-tuning</td>
+                        <td>High (initially)</td>
+                        <td>High (initially)</td>
+                        <td>Tailored to specific tasks<br>High accuracy</td>
+                        <td>Initial setup and training time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="btn btn-primary" onclick="prevSlide()">Previous</button>
+        <button class="btn btn-primary" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 11; // Adjusted for the new slides
+
+        function showSlide(n) {
+            const slide = document.getElementById('slide' + n);
+            if (!slide) return;
+
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            slide.classList.add('active');
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PL SQL to Databricks SQL Automation Presentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 80vw;
+            height: 70vh;
+            margin: 5vh auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 12px #aaa;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 2vh;
+        }
+
+        h2 {
+            color: #D32F2F; /* Atradius red */
+        }
+
+        img.logo {
+            width: 200px; /* Adjust as necessary */
+        }
+
+        img.slide-image {
+            width: 60%;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Company Logo -->
+    <div class="text-center mb-4">
+        <img class="logo" src="https://www.atradius.com.au/images/default-source/logos/atradius_logo.png" alt="Atradius Logo">
+    </div>
+
+    <div class="slide-container">
+        <!-- Slide 1 -->
+        <div class="slide active" id="slide1">
+            <h2>Introduction & Background</h2>
+            <ul>
+                <li>Importance of data processing optimization</li>
+                <li>Traditional PL SQL to Databricks SQL conversion</li>
+                <li>The potential of AI-driven transformation</li>
+            </ul>
+            <img class="slide-image" src="https://www.atradius.co.uk/images/default-source/whitepapers-landingpage/technology.jpg" alt="Data processing">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide2">
+            <h2>Current Scenario & AI Integration</h2>
+            <ul>
+                <li>Current conversion requires significant man-hours</li>
+                <li>Initial success in conversion with GPT-4</li>
+                <li>Scope: Optimize the conversion of 30 SQL scripts</li>
+            </ul>
+            <img class="slide-image" src="https://www.datamation.com/wp-content/uploads/2019/05/Database-Management-Systems-380x250.jpg" alt="Database Management">
+        </div>
+
+        <!-- ... other slides ... -->
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="btn btn-primary" onclick="prevSlide()">Previous</button>
+        <button class="btn btn-primary" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 2; // Adjust this to your total number of slides
+
+        function showSlide(n) {
+            const slide = document.getElementById('slide' + n);
+            if (!slide) return;
+
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            slide.classList.add('active');
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
