@@ -1,4 +1,4 @@
--- output to databricks for oracle hierchical queries
+-- output to databricks for oracle Hierarchical queries
 WITH recursive_cte AS (
   SELECT employee_id, manager_id
   FROM employees
